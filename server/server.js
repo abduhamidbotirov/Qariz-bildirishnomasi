@@ -4,14 +4,14 @@ import Telegram from "node-telegram-bot-api";
 const bot = new Telegram("7110727842:AAGMBllxmoPiB6475KyZSfw3TKDqrCYxxTk", {
   polling: true,
 });
-let userStates = {};
+let userStates = {}; 
 let allUserData = [];
 const qariz_info_channel_id = "@qariz_info";
 
 function generateFinalMessage(userData) {
   let message = `Qariz egasi: ${userData.sourceOrDestination}\nSummasi: ${userData.summa}\nQariz: ${userData.type}\n\n`;
   return message;
-}
+} 
 
 bot.on("message", handleMessage);
 bot.on("callback_query", handleCallbackQuery);
